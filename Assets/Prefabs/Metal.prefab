@@ -47,12 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 
   renderer: {fileID: 4373210675536517133}
-  playerSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  stoneSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  cloudSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  magnetSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  metalSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  woodSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  playerSprite: {fileID: -1182821291677670348, guid: e6784f4e41643de48a670ee08f1848c1, type: 3}
+  stoneSprite: {fileID: 6323242447520240221, guid: 58183820fc7ca0f4d9cbec1d820deb08, type: 3}
+  cloudSprite: {fileID: -1912190655761870020, guid: de96a12ffd019364ba9a1cbee638f6f0, type: 3}
+  magnetSprite: {fileID: 4488756246903136778, guid: 21dad67e64c4c674e83484ddf734946c, type: 3}
+  metalSprite: {fileID: 7075844648559293400, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
+  woodSprite: {fileID: 1135088928692803280, guid: 5b5cb3052aaa6c445b62d82e445343f3, type: 3}
   groundTrigger: {fileID: 4373210674561478459}
 --- !u!61 &4373210674561478459
 BoxCollider2D:
@@ -67,7 +67,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.6816597}
+  m_Offset: {x: 0.012397051, y: -3.6196744}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -78,7 +78,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6762991, y: 0.11902714}
+  m_Size: {x: 1.651505, y: 0.14382124}
   m_EdgeRadius: 0
 --- !u!1 &4373210675536517132
 GameObject:
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 4373210675536517132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11, y: 46, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4373210674561478454}
   m_RootOrder: 0
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 7075844648559293400, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -176,16 +176,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.023472548, y: 0.03129673}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1.84, y: 7.72}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.7304626, y: 7.3131456}
   m_EdgeRadius: 0
