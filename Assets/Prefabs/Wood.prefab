@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  renderer: {fileID: 0}
+  renderer: {fileID: 6777041592140079334}
   playerSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   stoneSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   cloudSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
