@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : SwitchableObject
 {
@@ -33,7 +34,6 @@ public class Player : SwitchableObject
     {
         if(collision.gameObject.name == "Goal")
         {
-            Debug.Log("WIN!");
-        }
+            SceneManager.LoadScene("Victory");        }
     }
 }

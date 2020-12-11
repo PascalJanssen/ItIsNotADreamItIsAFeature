@@ -28430,6 +28430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175857165679936023, guid: ab4fd9c8722186543a67af59e3005892, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab4fd9c8722186543a67af59e3005892, type: 3}
 --- !u!1 &1425126344
@@ -31200,7 +31204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6777041591421955122, guid: b4bb60b90ac1f4b4b9c109a902fe36ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.54
+      value: 6.88
       objectReference: {fileID: 0}
     - target: {fileID: 6777041591421955122, guid: b4bb60b90ac1f4b4b9c109a902fe36ce, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31237,6 +31241,10 @@ PrefabInstance:
     - target: {fileID: 6777041591421955125, guid: b4bb60b90ac1f4b4b9c109a902fe36ce, type: 3}
       propertyPath: m_Name
       value: Wood (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777041592140079385, guid: b4bb60b90ac1f4b4b9c109a902fe36ce, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bb60b90ac1f4b4b9c109a902fe36ce, type: 3}
@@ -35663,11 +35671,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4373210674561478454, guid: de390b444edbb2e4eae5ef6e34218a6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.97
+      value: 28.88
       objectReference: {fileID: 0}
     - target: {fileID: 4373210674561478454, guid: de390b444edbb2e4eae5ef6e34218a6f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.38
+      value: 7.34
       objectReference: {fileID: 0}
     - target: {fileID: 4373210674561478454, guid: de390b444edbb2e4eae5ef6e34218a6f, type: 3}
       propertyPath: m_LocalPosition.z
