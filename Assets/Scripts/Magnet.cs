@@ -20,11 +20,12 @@ public class Magnet : SwitchableObject
         rb.angularDrag = 0;
         rb.gravityScale = 0;
         rb.freezeRotation = true;
+        rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
 
         CircleCollider2D cc = so.gameObject.AddComponent<CircleCollider2D>();
         cc.isTrigger = true;
         cc.usedByEffector = true;
-        cc.radius = 1;
+        cc.radius = 15;
 
         PointEffector2D pe = so.gameObject.AddComponent<PointEffector2D>();
         pe.colliderMask = 1024;

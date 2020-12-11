@@ -23,7 +23,7 @@ public class Metal : SwitchableObject
         CircleCollider2D cc = so.gameObject.AddComponent<CircleCollider2D>();
         cc.isTrigger = true;
         cc.usedByEffector = true;
-        cc.radius = 0.25f;
+        cc.radius = 15f;
 
         PointEffector2D pe = so.gameObject.AddComponent<PointEffector2D>();
         pe.colliderMask = 1024;

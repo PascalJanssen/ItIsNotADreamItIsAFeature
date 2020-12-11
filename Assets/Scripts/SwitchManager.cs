@@ -28,13 +28,13 @@ public class SwitchManager
         {
             Magnet.RemoveFunction(clickedObject);
             Magnet.AddFunction(player);
-            player.renderer.sprite = clickedObject.cloudSprite;
+            player.renderer.sprite = clickedObject.magnetSprite;
         }
         else if (clickedObject.type.Equals("metal"))
         {
-            Magnet.RemoveFunction(clickedObject);
-            Magnet.AddFunction(player);
-            player.renderer.sprite = clickedObject.cloudSprite;
+            Metal.RemoveFunction(clickedObject);
+            Metal.AddFunction(player);
+            player.renderer.sprite = clickedObject.metalSprite;
         }
         else if (clickedObject.type.Equals("wood"))
         {
