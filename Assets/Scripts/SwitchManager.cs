@@ -24,6 +24,12 @@ public class SwitchManager
             Cloud.AddFunction(player);
             player.renderer.sprite = clickedObject.cloudSprite;
         }
+        else if (clickedObject.type.Equals("wood"))
+        {
+            Wood.RemoveFunction(clickedObject);
+            Wood.AddFunction(player);
+            player.renderer.sprite = clickedObject.woodSprite;
+        }
         else
         {
             return;
