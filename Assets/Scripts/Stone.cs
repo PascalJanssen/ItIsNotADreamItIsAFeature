@@ -7,11 +7,12 @@ public class Stone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.AddComponent<Rigidbody2D>();
-        GetComponent<Rigidbody2D>().mass = 1000;
-        GetComponent<Rigidbody2D>().drag = 0;
-        GetComponent<Rigidbody2D>().angularDrag = 0;
-        GetComponent<Rigidbody2D>().gravityScale = 6;
+        Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
+        rb.mass = 1000;
+        rb.drag = 0;
+        rb.angularDrag = 0;
+        rb.gravityScale = 6;
+        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
