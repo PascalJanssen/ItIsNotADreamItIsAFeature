@@ -16,6 +16,7 @@ public class Stone : SwitchableObject
         rb.drag = 0;
         rb.angularDrag = 0;
         rb.gravityScale = 6;
+        rb.freezeRotation = true;
     }
 
     public static void RemoveFunction(SwitchableObject so)
