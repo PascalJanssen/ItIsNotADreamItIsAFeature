@@ -6,6 +6,7 @@ public class Stone : SwitchableObject
 {
     private void Start()
     {
+        type = "stone";
         AddFunction(this);
     }
 

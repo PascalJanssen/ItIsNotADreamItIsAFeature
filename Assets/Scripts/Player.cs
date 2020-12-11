@@ -6,6 +6,7 @@ public class Player : SwitchableObject
 {
     private void Start()
     {
+        type = "player";
         SwitchManager.player = this;
         AddFunction(this);
     }

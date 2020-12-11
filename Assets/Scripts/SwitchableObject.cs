@@ -16,6 +16,9 @@ public class SwitchableObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SwitchManager.Switch(this);
+        if (!type.Equals("player"))
+        {
+            SwitchManager.Switch(this);
+        }
     }
 }

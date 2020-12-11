@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cloud : MonoBehaviour
+public class Cloud : SwitchableObject
 {
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
+        type = "cloud";
+        AddFunction(this);
+    }
+
+    public static void AddFunction(SwitchableObject so)
+    {
+        Rigidbody2D rb = so.gameObject.AddComponent<Rigidbody2D>();
         rb.mass = 1;
         rb.drag = 0;
         rb.angularDrag = 0;
@@ -15,9 +21,8 @@ public class Cloud : MonoBehaviour
         rb.freezeRotation = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void RemoveFunction(SwitchableObject so)
     {
-        
+        DestroyImmediate(so.GetComponent<Rigidbody2D>());
     }
 }
