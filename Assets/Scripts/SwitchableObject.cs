@@ -18,12 +18,14 @@ public class SwitchableObject : MonoBehaviour
     
     private void OnMouseDown()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-        if (hit.collider != null && !hit.collider.isTrigger && !type.Equals("player"))
+        RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        foreach (RaycastHit2D hit in hits)
         {
-            Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
-            SwitchManager.Switch(this);
+            if (hit.collider != null && !hit.collider.isTrigger && !type.Equals("player"))
+            {
+                Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
+                SwitchManager.Switch(this);
+            }
         }
     }
 }

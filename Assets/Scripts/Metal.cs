@@ -19,6 +19,7 @@ public class Metal : SwitchableObject
         rb.gravityScale = 6;
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         rb.freezeRotation = true;
+        rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
 
         CircleCollider2D cc = so.gameObject.AddComponent<CircleCollider2D>();
         cc.isTrigger = true;
