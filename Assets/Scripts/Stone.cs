@@ -9,17 +9,17 @@ public class Stone : SwitchableObject
         AddFunction(this);
     }
 
-    public static void AddFunction(SwitchableObject go)
+    public static void AddFunction(SwitchableObject so)
     {
-        Rigidbody2D rb = go.gameObject.AddComponent<Rigidbody2D>();
+        Rigidbody2D rb = so.gameObject.AddComponent<Rigidbody2D>();
         rb.mass = 1000;
         rb.drag = 0;
         rb.angularDrag = 0;
         rb.gravityScale = 6;
     }
 
-    public static void RemoveFunction(SwitchableObject go)
+    public static void RemoveFunction(SwitchableObject so)
     {
-        Destroy(go.GetComponent<Rigidbody2D>());
+        DestroyImmediate(so.GetComponent<Rigidbody2D>());
     }
 }

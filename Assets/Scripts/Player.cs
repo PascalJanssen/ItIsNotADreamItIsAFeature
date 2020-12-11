@@ -10,21 +10,22 @@ public class Player : SwitchableObject
         AddFunction(this);
     }
 
-    public static void AddFunction(SwitchableObject go)
+    public static void AddFunction(SwitchableObject so)
     {
-        Rigidbody2D rb = go.gameObject.AddComponent<Rigidbody2D>();
+
+        Rigidbody2D rb = so.gameObject.AddComponent<Rigidbody2D>();
         rb.mass = 1;
         rb.drag = 0;
         rb.angularDrag = 0;
         rb.gravityScale = 4;
         rb.freezeRotation = true;
 
-        go.gameObject.AddComponent<PlayerActions>();
+        so.gameObject.AddComponent<PlayerActions>();
     }
 
-    public static void RemoveFunction(SwitchableObject go)
+    public static void RemoveFunction(SwitchableObject so)
     {
-        Destroy(go.GetComponent<Rigidbody2D>());
-        Destroy(go.GetComponent<PlayerActions>());
+        DestroyImmediate(so.GetComponent<PlayerActions>());
+        DestroyImmediate(so.GetComponent<Rigidbody2D>());
     }
 }
