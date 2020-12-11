@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 
   renderer: {fileID: 1002423580207909231}
-  playerSprite: {fileID: 21300000, guid: 03c5dc1962eb0e1409348974c9a73851, type: 3}
+  playerSprite: {fileID: 21300000, guid: 3d67ffc6c49236f4e88a03cf0b93e07a, type: 3}
   stoneSprite: {fileID: 21300000, guid: b45c3e252b34a634e95294cad30c40c7, type: 3}
   cloudSprite: {fileID: 21300000, guid: 03c5dc1962eb0e1409348974c9a73851, type: 3}
   magnetSprite: {fileID: 21300000, guid: bb911d2b09f7b0d46a8d5f9f4bc32808, type: 3}
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 03c5dc1962eb0e1409348974c9a73851, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d67ffc6c49236f4e88a03cf0b93e07a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
