@@ -2,27 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stone : SwitchableObject
+public class Wood : SwitchableObject
 {
     private void Start()
     {
-        type = "stone";
+        type = "wood";
         AddFunction(this);
     }
 
     public static void AddFunction(SwitchableObject so)
     {
         Rigidbody2D rb = so.gameObject.AddComponent<Rigidbody2D>();
-        rb.mass = 1000;
-        rb.drag = 0;
-        rb.angularDrag = 0;
-        rb.gravityScale = 6;
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         rb.freezeRotation = true;
+        so.gameObject.layer = 9;
     }
 
     public static void RemoveFunction(SwitchableObject so)
     {
         DestroyImmediate(so.GetComponent<Rigidbody2D>());
+        so.gameObject.layer = 0;
     }
 }

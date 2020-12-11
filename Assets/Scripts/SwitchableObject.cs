@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SwitchableObject : MonoBehaviour
 {
+    [HideInInspector]
     public string type = "";
     public SpriteRenderer renderer;
     public Sprite playerSprite;
