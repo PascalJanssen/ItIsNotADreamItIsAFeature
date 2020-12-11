@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Cloud : SwitchableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         type = "cloud";
         AddFunction(this);
@@ -13,6 +12,8 @@ public class Cloud : SwitchableObject
 
     public static void AddFunction(SwitchableObject so)
     {
+        so.gameObject.layer = 8;
+
         Rigidbody2D rb = so.gameObject.AddComponent<Rigidbody2D>();
         rb.mass = 1;
         rb.drag = 0;
@@ -23,6 +24,8 @@ public class Cloud : SwitchableObject
 
     public static void RemoveFunction(SwitchableObject so)
     {
+        so.gameObject.layer = 0;
+
         DestroyImmediate(so.GetComponent<Rigidbody2D>());
     }
 }

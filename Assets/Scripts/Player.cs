@@ -13,7 +13,6 @@ public class Player : SwitchableObject
 
     public static void AddFunction(SwitchableObject so)
     {
-
         Rigidbody2D rb = so.gameObject.AddComponent<Rigidbody2D>();
         rb.mass = 1;
         rb.drag = 0;
@@ -28,5 +27,13 @@ public class Player : SwitchableObject
     {
         DestroyImmediate(so.GetComponent<PlayerActions>());
         DestroyImmediate(so.GetComponent<Rigidbody2D>());
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "Goal")
+        {
+            Debug.Log("WIN!");
+        }
     }
 }

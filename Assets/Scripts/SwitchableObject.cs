@@ -10,7 +10,8 @@ public class SwitchableObject : MonoBehaviour
     public Sprite playerSprite;
     public Sprite stoneSprite;
     public Sprite cloudSprite;
-    public Sprite metallSprite;
+    public Sprite magnetSprite;
+    public Sprite metalSprite;
     public Sprite woodSprite;
     public Collider2D groundTrigger;
 

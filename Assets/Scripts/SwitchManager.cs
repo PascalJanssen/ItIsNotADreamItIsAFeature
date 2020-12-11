@@ -24,6 +24,18 @@ public class SwitchManager
             Cloud.AddFunction(player);
             player.renderer.sprite = clickedObject.cloudSprite;
         }
+        else if (clickedObject.type.Equals("magnet"))
+        {
+            Magnet.RemoveFunction(clickedObject);
+            Magnet.AddFunction(player);
+            player.renderer.sprite = clickedObject.cloudSprite;
+        }
+        else if (clickedObject.type.Equals("metal"))
+        {
+            Magnet.RemoveFunction(clickedObject);
+            Magnet.AddFunction(player);
+            player.renderer.sprite = clickedObject.cloudSprite;
+        }
         else
         {
             return;
