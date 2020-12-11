@@ -16,31 +16,31 @@ public class SwitchManager
         {
             Stone.RemoveFunction(clickedObject);
             Stone.AddFunction(player);
-            player.renderer.sprite = player.stoneSprite;
+            player.renderer.sprite = clickedObject.stoneSprite;
         }
         else if (clickedObject.type.Equals("cloud"))
         {
             Cloud.RemoveFunction(clickedObject);
             Cloud.AddFunction(player);
-            player.renderer.sprite = player.cloudSprite;
+            player.renderer.sprite = clickedObject.cloudSprite;
         }
         else if (clickedObject.type.Equals("magnet"))
         {
             Magnet.RemoveFunction(clickedObject);
             Magnet.AddFunction(player);
-            player.renderer.sprite = player.magnetSprite;
+            player.renderer.sprite = clickedObject.magnetSprite;
         }
         else if (clickedObject.type.Equals("metal"))
         {
             Metal.RemoveFunction(clickedObject);
             Metal.AddFunction(player);
-            player.renderer.sprite = player.metalSprite;
+            player.renderer.sprite = clickedObject.metalSprite;
         }
         else if (clickedObject.type.Equals("wood"))
         {
             Wood.RemoveFunction(clickedObject);
             Wood.AddFunction(player);
-            player.renderer.sprite = player.woodSprite;
+            player.renderer.sprite = clickedObject.woodSprite;
         }
         else
         {
