@@ -11,7 +11,11 @@ public class Stone : SwitchableObject
 
     public static void AddFunction(SwitchableObject go)
     {
-        go.gameObject.AddComponent<Rigidbody2D>();
+        Rigidbody2D rb = go.gameObject.AddComponent<Rigidbody2D>();
+        rb.mass = 1000;
+        rb.drag = 0;
+        rb.angularDrag = 0;
+        rb.gravityScale = 6;
     }
 
     public static void RemoveFunction(SwitchableObject go)
