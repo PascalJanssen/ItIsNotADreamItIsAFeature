@@ -13,6 +13,7 @@ public class Cloud : SwitchableObject
     public static void AddFunction(SwitchableObject so)
     {
         so.gameObject.layer = 8;
+        so.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 8;
 
         Rigidbody2D rb = so.gameObject.AddComponent<Rigidbody2D>();
         rb.mass = 1;
@@ -25,6 +26,7 @@ public class Cloud : SwitchableObject
     public static void RemoveFunction(SwitchableObject so)
     {
         so.gameObject.layer = 0;
+        so.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 0;
 
         DestroyImmediate(so.GetComponent<Rigidbody2D>());
     }

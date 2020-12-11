@@ -16,11 +16,13 @@ public class Wood : SwitchableObject
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         rb.freezeRotation = true;
         so.gameObject.layer = 9;
+        so.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 9;
     }
 
     public static void RemoveFunction(SwitchableObject so)
     {
         DestroyImmediate(so.GetComponent<Rigidbody2D>());
         so.gameObject.layer = 0;
+        so.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 0;
     }
 }
