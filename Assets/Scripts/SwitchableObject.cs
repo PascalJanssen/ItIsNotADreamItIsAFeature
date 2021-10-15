@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class SwitchableObject : MonoBehaviour
 {
-    public SpriteRenderer renderer;
+    public SpriteRenderer spriteRenderer;
     public Sprite playerSprite;
     public Sprite stoneSprite;
     public Sprite cloudSprite;
@@ -21,22 +22,22 @@ public abstract class SwitchableObject : MonoBehaviour
         switch (switchableFunction.FunctionType)
         {
             case FunctionType.Magnet:
-                renderer.sprite = magnetSprite;
+                spriteRenderer.sprite = magnetSprite;
                 break;
             case FunctionType.Player:
-                renderer.sprite = playerSprite;
+                spriteRenderer.sprite = playerSprite;
                 break;
             case FunctionType.Wood:
-                renderer.sprite = woodSprite;
+                spriteRenderer.sprite = woodSprite;
                 break;
             case FunctionType.Cloud:
-                renderer.sprite = cloudSprite;
+                spriteRenderer.sprite = cloudSprite;
                 break;
             case FunctionType.Metal:
-                renderer.sprite = metalSprite;
+                spriteRenderer.sprite = metalSprite;
                 break;
             case FunctionType.Stone:
-                renderer.sprite = stoneSprite;
+                spriteRenderer.sprite = stoneSprite;
                 break;
             default:
                 break;

@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535a77b4cdb75cf4a8a66ba60410fcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 
-  renderer: {fileID: 6777041592140079334}
+  spriteRenderer: {fileID: 6777041592140079334}
   playerSprite: {fileID: -2311659948842064771, guid: e6784f4e41643de48a670ee08f1848c1, type: 3}
   stoneSprite: {fileID: 8399011212269539787, guid: 58183820fc7ca0f4d9cbec1d820deb08, type: 3}
   cloudSprite: {fileID: 6357164628407952830, guid: de96a12ffd019364ba9a1cbee638f6f0, type: 3}
@@ -54,6 +53,7 @@ MonoBehaviour:
   metalSprite: {fileID: 919693202005755323, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
   woodSprite: {fileID: -2067898546876541913, guid: 5b5cb3052aaa6c445b62d82e445343f3, type: 3}
   groundTrigger: {fileID: 6777041591421955120}
+  spriteData: {fileID: 11400000, guid: 4143d1369ec3aac43a5d7fcd0ed07f5a, type: 2}
 --- !u!61 &6777041591421955120
 BoxCollider2D:
   m_ObjectHideFlags: 0

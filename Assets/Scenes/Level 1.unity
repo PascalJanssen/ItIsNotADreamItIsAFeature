@@ -13294,6 +13294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
 --- !u!1 &212224742
@@ -13531,6 +13535,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+    - target: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"switchableFunction","value":{"$id":0,"$type":"StoneFunction,
+        Assembly-CSharp"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
 --- !u!1001 &701951848
@@ -13588,6 +13609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4809732913334218494, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 4809732913334218494, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
 --- !u!1001 &751194291
@@ -13771,6 +13796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 633615699666094195, guid: 1d8723f7e30ff3049aa2f3b9840e3eb3, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 633615699666094195, guid: 1d8723f7e30ff3049aa2f3b9840e3eb3, type: 3}
     - target: {fileID: 633615699666094196, guid: 1d8723f7e30ff3049aa2f3b9840e3eb3, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -13920,6 +13949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
 --- !u!1001 &1435041827
@@ -13977,6 +14010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8406186501915687575, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
 --- !u!1 &1506695195
@@ -14073,6 +14110,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1002423578809703433, guid: cc571a307a447ea4fb283a3928764337, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 1002423578809703433, guid: cc571a307a447ea4fb283a3928764337, type: 3}
     - target: {fileID: 1002423578809703434, guid: cc571a307a447ea4fb283a3928764337, type: 3}
       propertyPath: m_Name
       value: Player
@@ -14243,6 +14284,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4373210674561478455, guid: de390b444edbb2e4eae5ef6e34218a6f, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 4373210674561478455, guid: de390b444edbb2e4eae5ef6e34218a6f, type: 3}
     - target: {fileID: 4373210674561478458, guid: de390b444edbb2e4eae5ef6e34218a6f, type: 3}
       propertyPath: m_Name
       value: Metal
