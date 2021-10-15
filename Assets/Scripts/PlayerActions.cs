@@ -8,7 +8,7 @@ public class PlayerActions : MonoBehaviour
     private Collider2D groundTrigger;
     private int triggerObjectCount = 0;
     private float speed = 8;
-    private float jump = 17;
+    private float jumpPower = 20;
     private bool jumpButtonDown = false;
 
 
@@ -28,7 +28,7 @@ public class PlayerActions : MonoBehaviour
 
         if(!jumpButtonDown && triggerObjectCount > 0 && Input.GetAxis("Vertical") > 0)
         {
-            rb.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
             jumpButtonDown = true;
         }
         transform.Translate(new Vector3(Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime, 0, 0));
