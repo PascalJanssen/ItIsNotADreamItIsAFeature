@@ -9,6 +9,23 @@ public class SwitchManager
 
     public static void Switch(SwitchableObject clickedObject)
     {
+
+        player.switchableFunction.RemoveFunction(player.transform);
+        clickedObject.switchableFunction.RemoveFunction(clickedObject.transform);
+
+        clickedObject.switchableFunction.AddFunction(player.transform);
+        player.switchableFunction.AddFunction(clickedObject.transform);
+        
+        player.switchableFunction = clickedObject.switchableFunction;
+        clickedObject.switchableFunction = new PlayerFunction();
+
+        player.UpdateSprite();
+        clickedObject.UpdateSprite();
+
+        player = clickedObject;
+
+
+        /*
         Debug.Log(clickedObject.type);
         Player.RemoveFunction(player);
 
@@ -52,7 +69,7 @@ public class SwitchManager
 
         player.type = clickedObject.type;
         clickedObject.type = "player";
-        player = clickedObject;
+        player = clickedObject;*/
     }
 
 }
