@@ -5,38 +5,49 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D groundTrigger;
     private int triggerObjectCount = 0;
     private float speed = 8;
-    private float jump = 17;
+    private float jumpPower = 20;
+    private bool jumpButtonDown = false;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        groundTrigger = GetComponent<Player>().groundTrigger;
     }
 
 
     void FixedUpdate()
     {
-        if(triggerObjectCount > 0 && Input.GetAxis("Vertical") > 0)
+        if(Input.GetAxis("Vertical") == 0)
         {
-            rb.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+            jumpButtonDown = false;
         }
-        Debug.Log(triggerObjectCount);
+
+        if(!jumpButtonDown && triggerObjectCount > 0 && Input.GetAxis("Vertical") > 0)
+        {
+            rb.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+            jumpButtonDown = true;
+        }
         transform.Translate(new Vector3(Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime, 0, 0));
     }
     
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        triggerObjectCount += 1;
+        
+        if (!other.isTrigger)
+        {
+            triggerObjectCount += 1;
+        }
     }
 
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        triggerObjectCount -= 1;
+        if (!collision.isTrigger)
+        {
+            triggerObjectCount -= 1;
+        }
     }
 }
