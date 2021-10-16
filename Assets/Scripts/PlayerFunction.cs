@@ -1,26 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerFunction : ISwitchable
+public class PlayerFunction : SwitchFunction
 {
-    private FunctionType functionType = FunctionType.Player;
+    protected override void OnMouseDown(){ }
 
-    public FunctionType FunctionType { get => functionType;}
 
-    public void AddFunction(Transform transform)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Rigidbody2D rb = transform.gameObject.AddComponent<Rigidbody2D>();
-        rb.mass = 1;
-        rb.drag = 0;
-        rb.angularDrag = 0;
-        rb.gravityScale = 4;
-        rb.freezeRotation = true;
-
-        transform.gameObject.AddComponent<PlayerActions>();
-    }
-
-    public void RemoveFunction(Transform transform)
-    {
-        Object.DestroyImmediate(transform.GetComponent<PlayerActions>());
-        Object.DestroyImmediate(transform.GetComponent<Rigidbody2D>());
+        if (collision.gameObject.name == "Goal" && switchableObject.functionType == FunctionType.Player)
+        {
+            SceneManager.LoadScene("Victory");
+        }
     }
 }

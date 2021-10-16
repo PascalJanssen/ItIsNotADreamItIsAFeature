@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 8406186501915687592, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ffd259be2d0334fa33d707675fcbe2, type: 3}
 --- !u!1 &167715473
@@ -13609,10 +13613,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4809732913334218494, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
-      propertyPath: serializationData.Prefab
-      value: 
-      objectReference: {fileID: 4809732913334218494, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
+    - target: {fileID: 8091428885229442578, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091428885229442578, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.82
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332b4ea122c685b49b98cecc4bc10803, type: 3}
 --- !u!1001 &751194291
@@ -14066,6 +14074,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1061888038, guid: cc571a307a447ea4fb283a3928764337, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1002423578809703432, guid: cc571a307a447ea4fb283a3928764337, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14138,7 +14150,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.71
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1002423578809703439, guid: cc571a307a447ea4fb283a3928764337, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc571a307a447ea4fb283a3928764337, type: 3}
 --- !u!1 &1853486976
 GameObject:

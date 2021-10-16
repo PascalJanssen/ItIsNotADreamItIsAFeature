@@ -1,24 +1,32 @@
 ﻿using UnityEngine;
+using Sirenix.OdinInspector;
 
-public class WoodFunction : ISwitchable
+public class WoodFunction : SwitchFunction
 {
-    private FunctionType functionType = FunctionType.Wood;
+    [SerializeField]
+    private int woodLayer = 9;
 
-    public FunctionType FunctionType { get => functionType; }
-
-    public void AddFunction(Transform transform)
+    protected override void BeforeSwitch()
     {
-        Rigidbody2D rb = transform.gameObject.AddComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-        rb.freezeRotation = true;
-        transform.gameObject.layer = 9;
-        transform.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 9;
+        base.BeforeSwitch();
+
+        transform.gameObject.layer = 0;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.layer = 0;
+        }
     }
 
-    public void RemoveFunction(Transform transform)
+    protected override void AfterSwitch()
     {
-        Object.DestroyImmediate(transform.GetComponent<Rigidbody2D>());
-        transform.gameObject.layer = 0;
-        transform.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 0;
+        base.AfterSwitch();
+
+        transform.gameObject.layer = woodLayer;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.layer = woodLayer;
+        }
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906391687}
   - component: {fileID: 906391688}
+  - component: {fileID: 906391689}
   m_Layer: 0
   m_Name: StoneFunction
   m_TagString: Untagged
@@ -44,15 +45,28 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 6
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &906391689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906391686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81e28fb84f910c4eb46508b77a24753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchableObject: {fileID: 176327472}
 --- !u!1 &8406186501173089514
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,6 +79,7 @@ GameObject:
   - component: {fileID: 8406186501173089517}
   - component: {fileID: 1270479541}
   - component: {fileID: 2824216659129742638}
+  - component: {fileID: 743333531777236071}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -182,6 +197,32 @@ MonoBehaviour:
   magnetSprite: {fileID: -2988339257838675328, guid: 21dad67e64c4c674e83484ddf734946c, type: 3}
   metalSprite: {fileID: 4280140775337727081, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
   woodSprite: {fileID: 5370509177723687733, guid: 5b5cb3052aaa6c445b62d82e445343f3, type: 3}
+--- !u!61 &743333531777236071
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406186501173089514}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12696457, y: -1.5930256}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.1299996, y: 4.29}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8479805, y: 0.21830726}
+  m_EdgeRadius: 0
 --- !u!1 &8406186501915687573
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +232,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8406186501915687572}
-  - component: {fileID: 8406186501915687592}
   - component: {fileID: 176327472}
   m_Layer: 0
   m_Name: Stone
@@ -215,32 +255,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8406186501915687592
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8406186501915687573}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.12696457, y: -1.5930256}
-  m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.8479805, y: 0.21830726}
-  m_EdgeRadius: 0
 --- !u!114 &176327472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9938ed7ff0e0388448d490ed62071452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTrigger: {fileID: 8406186501915687592}
+  groundTrigger: {fileID: 743333531777236071}
   functionType: 5
-  switchableFunction: {fileID: 906391686}
+  switchableFunction: {fileID: 906391689}
   switchableSprite: {fileID: 2824216659129742638}

@@ -9,10 +9,7 @@ public class SwitchManager
     
     public static void Switch(SwitchableObject clickedObject)
     {
-        GameObject playerFunction = player.switchableFunction;
-
-        player.Switch(clickedObject.switchableFunction, clickedObject.functionType);
-        clickedObject.Switch(playerFunction, FunctionType.Player);
+        player.switchableFunction.Switch(clickedObject.switchableFunction, clickedObject.functionType);
 
         player = clickedObject;
     }
