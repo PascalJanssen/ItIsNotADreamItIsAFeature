@@ -8,7 +8,7 @@ public class PlayerFunction : SwitchFunction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Goal" && switchableObject.functionType == FunctionType.Player)
+        if (collision.gameObject.name == "Goal" && switchableObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("Victory");
         }
