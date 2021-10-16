@@ -1,29 +1,31 @@
 ﻿using UnityEngine;
 
-public class CloudFunction : ISwitchable
+public class CloudFunction : SwitchFunction
 {
-    private FunctionType functionType = FunctionType.Cloud;
+    [SerializeField]
+    private int cloudLayer = 8;
 
-    public FunctionType FunctionType { get => functionType; }
-
-    public void AddFunction(Transform transform)
+    protected override void BeforeSwitch()
     {
-        transform.gameObject.layer = 8;
-        transform.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 8;
+        base.BeforeSwitch();
 
-        Rigidbody2D rb = transform.gameObject.AddComponent<Rigidbody2D>();
-        rb.mass = 1;
-        rb.drag = 0;
-        rb.angularDrag = 0;
-        rb.gravityScale = -0.3f;
-        rb.freezeRotation = true;
+        transform.gameObject.layer = 0;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.layer = 0;
+        }
     }
 
-    public void RemoveFunction(Transform transform)
+    protected override void AfterSwitch()
     {
-        transform.gameObject.layer = 0;
-        transform.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.layer = 0;
+        base.AfterSwitch();
 
-        Object.DestroyImmediate(transform.GetComponent<Rigidbody2D>());
+        transform.gameObject.layer = cloudLayer;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.layer = cloudLayer;
+        }
     }
 }
