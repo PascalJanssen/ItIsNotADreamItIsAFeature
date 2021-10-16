@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Collider2D groundTrigger;
     private int triggerObjectCount = 0;
     private float speed = 8;
     private float jumpPower = 20;
@@ -15,7 +14,6 @@ public class PlayerActions : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        groundTrigger = GetComponent<SwitchableObject>().groundTrigger;
     }
 
 

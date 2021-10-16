@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 633615699666094196}
-  - component: {fileID: 633615699666094195}
   - component: {fileID: 633615699666094197}
   m_Layer: 10
   m_Name: Magnet
@@ -33,27 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &633615699666094195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633615699666094198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991fb20986d875e4d91de7eae0ac80ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 633615699720825122}
-  playerSprite: {fileID: -7446026091647042388, guid: e6784f4e41643de48a670ee08f1848c1, type: 3}
-  stoneSprite: {fileID: 8046235658175446820, guid: 58183820fc7ca0f4d9cbec1d820deb08, type: 3}
-  cloudSprite: {fileID: 4115051900569096755, guid: de96a12ffd019364ba9a1cbee638f6f0, type: 3}
-  magnetSprite: {fileID: 6513253489876158457, guid: 21dad67e64c4c674e83484ddf734946c, type: 3}
-  metalSprite: {fileID: 9051345908527930705, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
-  woodSprite: {fileID: 3228662599699316609, guid: 5b5cb3052aaa6c445b62d82e445343f3, type: 3}
-  groundTrigger: {fileID: 633615699666094197}
-  spriteData: {fileID: 11400000, guid: 1cf4054e31460994cb3179b78fc5b40b, type: 2}
 --- !u!61 &633615699666094197
 BoxCollider2D:
   m_ObjectHideFlags: 0

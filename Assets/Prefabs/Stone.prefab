@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &906391686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906391687}
+  - component: {fileID: 906391688}
+  m_Layer: 0
+  m_Name: StoneFunction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906391687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906391686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8406186501173089519}
+  m_Father: {fileID: 8406186501915687572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &906391688
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906391686}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 6
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &8406186501173089514
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +63,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8406186501173089519}
   - component: {fileID: 8406186501173089517}
-  - component: {fileID: 8406186501173089516}
+  - component: {fileID: 1270479541}
+  - component: {fileID: 2824216659129742638}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -25,11 +79,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8406186501173089514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
-  m_Father: {fileID: 8406186501915687572}
+  m_Father: {fileID: 906391687}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8406186501173089517
@@ -83,7 +137,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8406186501173089516
+--- !u!61 &1270479541
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14631557, y: -0.07803488}
+  m_Offset: {x: -0.12247372, y: -0.061237097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,8 +161,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.2911224, y: 3.782772}
+  m_Size: {x: 4.214941, y: 3.0208201}
   m_EdgeRadius: 0
+--- !u!114 &2824216659129742638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406186501173089514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfb0d88355487b45b40f5d1a4dab19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8406186501173089517}
+  playerSprite: {fileID: 5938012242645255967, guid: e6784f4e41643de48a670ee08f1848c1, type: 3}
+  stoneSprite: {fileID: 6153560468827928664, guid: 58183820fc7ca0f4d9cbec1d820deb08, type: 3}
+  cloudSprite: {fileID: -6041077907013076088, guid: de96a12ffd019364ba9a1cbee638f6f0, type: 3}
+  magnetSprite: {fileID: -2988339257838675328, guid: 21dad67e64c4c674e83484ddf734946c, type: 3}
+  metalSprite: {fileID: 4280140775337727081, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
+  woodSprite: {fileID: 5370509177723687733, guid: 5b5cb3052aaa6c445b62d82e445343f3, type: 3}
 --- !u!1 &8406186501915687573
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,8 +191,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8406186501915687572}
-  - component: {fileID: 8406186501915687575}
   - component: {fileID: 8406186501915687592}
+  - component: {fileID: 176327472}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -138,31 +211,10 @@ Transform:
   m_LocalPosition: {x: -1.4, y: 5.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8406186501173089519}
+  - {fileID: 906391687}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8406186501915687575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8406186501915687573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88403a688f1a9864994cf6542a3106d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 8406186501173089517}
-  playerSprite: {fileID: 5938012242645255967, guid: e6784f4e41643de48a670ee08f1848c1, type: 3}
-  stoneSprite: {fileID: 6153560468827928664, guid: 58183820fc7ca0f4d9cbec1d820deb08, type: 3}
-  cloudSprite: {fileID: -6041077907013076088, guid: de96a12ffd019364ba9a1cbee638f6f0, type: 3}
-  magnetSprite: {fileID: -2988339257838675328, guid: 21dad67e64c4c674e83484ddf734946c, type: 3}
-  metalSprite: {fileID: 4280140775337727081, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
-  woodSprite: {fileID: 5370509177723687733, guid: 5b5cb3052aaa6c445b62d82e445343f3, type: 3}
-  groundTrigger: {fileID: 8406186501915687592}
-  spriteData: {fileID: 11400000, guid: d0270f98e8c25a844a0a5161bb12044a, type: 2}
 --- !u!61 &8406186501915687592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -189,3 +241,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8479805, y: 0.21830726}
   m_EdgeRadius: 0
+--- !u!114 &176327472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406186501915687573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9938ed7ff0e0388448d490ed62071452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTrigger: {fileID: 8406186501915687592}
+  functionType: 5
+  switchableFunction: {fileID: 906391686}
+  switchableSprite: {fileID: 2824216659129742638}

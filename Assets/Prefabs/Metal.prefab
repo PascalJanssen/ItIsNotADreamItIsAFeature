@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4373210674561478454}
-  - component: {fileID: 4373210674561478455}
   - component: {fileID: 4373210674561478459}
   m_Layer: 0
   m_Name: Metal
@@ -33,27 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4373210674561478455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4373210674561478458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a36c509c818b424b8711e7c85caa80b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 4373210675536517133}
-  playerSprite: {fileID: -1182821291677670348, guid: e6784f4e41643de48a670ee08f1848c1, type: 3}
-  stoneSprite: {fileID: 6323242447520240221, guid: 58183820fc7ca0f4d9cbec1d820deb08, type: 3}
-  cloudSprite: {fileID: -1912190655761870020, guid: de96a12ffd019364ba9a1cbee638f6f0, type: 3}
-  magnetSprite: {fileID: 4488756246903136778, guid: 21dad67e64c4c674e83484ddf734946c, type: 3}
-  metalSprite: {fileID: 7075844648559293400, guid: 93f898a7e6488b94694dffc67424e6a9, type: 3}
-  woodSprite: {fileID: 1135088928692803280, guid: 5b5cb3052aaa6c445b62d82e445343f3, type: 3}
-  groundTrigger: {fileID: 4373210674561478459}
-  spriteData: {fileID: 11400000, guid: 7950f30a2ec97f24d85595aa9e04110a, type: 2}
 --- !u!61 &4373210674561478459
 BoxCollider2D:
   m_ObjectHideFlags: 0
