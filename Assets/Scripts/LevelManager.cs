@@ -21,14 +21,14 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    public void LoadLevel1()
+    public void LoadMenu()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Menu");
     }
 
 
-    public void LoadLevel2()
+    public void LoadLevel(string levelnr)
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level " + levelnr);
     }
 }
