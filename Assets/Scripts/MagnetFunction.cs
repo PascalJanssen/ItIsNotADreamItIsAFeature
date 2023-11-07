@@ -14,11 +14,6 @@ public class MagnetFunction : SwitchFunction
 
         transform.gameObject.layer = 0;
 
-        foreach (Transform child in transform)
-        {
-            child.gameObject.layer = 0;
-        }
-
         rigidbody2D.velocity = Vector2.zero;
     }
 
@@ -27,9 +22,5 @@ public class MagnetFunction : SwitchFunction
         base.AfterSwitch();
 
         transform.gameObject.layer = magnetLayer;
-        foreach (Transform child in transform)
-        {
-            child.gameObject.layer = magnetLayer;
-        }
     }
 }

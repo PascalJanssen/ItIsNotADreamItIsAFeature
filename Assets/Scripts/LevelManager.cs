@@ -27,8 +27,8 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    public void LoadLevel(string levelnr)
+    public void LoadLevel(string levelname)
     {
-        SceneManager.LoadScene("Level " + levelnr);
+        SceneManager.LoadScene(levelname);
     }
 }

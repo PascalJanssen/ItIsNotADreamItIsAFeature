@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4355092111430766916}
   - component: {fileID: 5860740710297726857}
   - component: {fileID: 924214334537899727}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MetalFunction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 10
 --- !u!250 &924214334537899727
 PointEffector2D:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class PlayerFunction : SwitchFunction
 {
-    protected override void OnMouseDown(){ }
-
+    public override void OnPointerDown(PointerEventData pointerEventData) { }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

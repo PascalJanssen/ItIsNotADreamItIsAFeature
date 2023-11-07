@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633615699666094196}
   - component: {fileID: 846785067}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Magnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 633615699720825123}
   - component: {fileID: 846785068}
   - component: {fileID: 3773194041187829705}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,4 +310,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 10

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SwitchManager
+﻿public class SwitchManager
 {
     public static SwitchableObject player;
     

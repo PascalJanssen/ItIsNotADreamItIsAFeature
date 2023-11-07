@@ -1,59 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class SwitchFunction : MonoBehaviour
+public class SwitchFunction : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField]
     protected SwitchableObject switchableObject;
 
-    public void Switch(SwitchFunction function, FunctionType type)
+    public void Switch(SwitchFunction otherFunction, FunctionType otherType)
     {
-        function.BeforeSwitch();
+        otherFunction.BeforeSwitch();
         BeforeSwitch();
 
-        function.switchableObject.functionType = switchableObject.functionType;
-        switchableObject.functionType = type;
+        otherFunction.switchableObject.functionType = switchableObject.functionType;
+        switchableObject.functionType = otherType;
 
-        function.switchableObject.switchableSprite.transform.parent = null;
+        otherFunction.switchableObject.switchableSprite.transform.parent = null;
         switchableObject.switchableSprite.transform.parent = null;
 
-        function.transform.parent = switchableObject.transform;
-        transform.parent = function.switchableObject.transform;
+        otherFunction.transform.parent = switchableObject.transform;
+        transform.parent = otherFunction.switchableObject.transform;
 
-        function.transform.position = switchableObject.switchableSprite.transform.position;
-        transform.position = function.switchableObject.switchableSprite.transform.position;
+        otherFunction.transform.position = switchableObject.switchableSprite.transform.position;
+        transform.position = otherFunction.switchableObject.switchableSprite.transform.position;
 
-        function.switchableObject.switchableFunction = switchableObject.switchableFunction;
-        switchableObject.switchableFunction = function;
+        otherFunction.switchableObject.switchableFunction = this;
+        switchableObject.switchableFunction = otherFunction;
 
-        function.switchableObject.switchableSprite.transform.parent = transform;
-        switchableObject.switchableSprite.transform.parent = function.transform;
+        otherFunction.switchableObject.switchableSprite.transform.parent = transform;
+        switchableObject.switchableSprite.transform.parent = otherFunction.transform;
 
-        function.switchableObject.switchableSprite.UpdateSprite(function.switchableObject.functionType);
-        switchableObject.switchableSprite.UpdateSprite(type);
-        
-        function.AfterSwitch();
+        otherFunction.switchableObject.switchableSprite.UpdateSprite(otherFunction.switchableObject.functionType);
+        switchableObject.switchableSprite.UpdateSprite(otherType);
+
+        otherFunction.switchableObject = otherFunction.GetComponentInParent<SwitchableObject>();
+        switchableObject = GetComponentInParent<SwitchableObject>();
+
+        otherFunction.AfterSwitch();
         AfterSwitch();
     }
 
-    protected virtual void BeforeSwitch(){ }
+    protected virtual void BeforeSwitch() { }
 
     protected virtual void AfterSwitch()
     {
         switchableObject = GetComponentInParent<SwitchableObject>();
     }
 
-    protected virtual void OnMouseDown()
+    public virtual void OnPointerDown(PointerEventData pointerEventData)
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        foreach (RaycastHit2D hit in hits)
-        {
-            if (hit.collider != null && !hit.collider.isTrigger)
-            {
-                Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
-                SwitchManager.Switch(switchableObject);
-            }
-        }
+        SwitchManager.Switch(switchableObject);
     }
 }
