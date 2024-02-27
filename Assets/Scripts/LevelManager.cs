@@ -5,18 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Menu");
+            if (SceneManager.GetActiveScene().name == "Menu") Application.Quit();
+            LoadMenu();
+        }
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

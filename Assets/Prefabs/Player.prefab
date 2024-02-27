@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002423578809703432}
-  - component: {fileID: 1002423578809703433}
+  - component: {fileID: 7199093423130378098}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1002423578809703433
+--- !u!114 &7199093423130378098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,10 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1002423578809703434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d120279f24311ae48a8e2ad82e9c44bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 9938ed7ff0e0388448d490ed62071452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTrigger: {fileID: 1061888038}
+  groundTrigger: {fileID: 1002423580207909228}
   functionType: 1
   switchableFunction: {fileID: 815027174646012876}
   switchableSprite: {fileID: 788979628676315666}
@@ -283,4 +283,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25dde8b2d5e3a3e48b6339d3063a593d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchableObject: {fileID: 1002423578809703433}
+  switchableObject: {fileID: 7199093423130378098}
